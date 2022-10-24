@@ -19,6 +19,17 @@ This RFC provides guidance for new fields to better describe entities common in 
 Stage 1: If the changes include field additions or modifications, please create a folder titled as the RFC number under rfcs/text/. This will be where proposed schema changes as standalone YAML files or extended example mappings and larger source documents will go as the RFC is iterated upon.
 -->
 
+### api
+- `api.name` - Name of the API.
+  - type: keyword
+  - example: `All users`
+- `api.path` - URI of the API endpoint.
+  - type: keyword
+  - example: `/users/active`
+- `api.version` - Version of the API.
+  - type: float
+  - example: `2.01`
+
 ### application
 - `application.name` - Name of the application.
   - type: keyword
@@ -55,7 +66,7 @@ Stage 1: If the changes include field additions or modifications, please create 
   - type: keyword
 - `policy.type`
   - type: keyword
-  - The field value must be one of the following: `# TODO #`
+  - The field value must be one of the following: `functional`, `posture`, `security`
 
 ### role
 - `role.name`
