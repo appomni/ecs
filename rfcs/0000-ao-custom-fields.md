@@ -127,6 +127,8 @@ Stage 2: Identifies scope of impact of changes. Are breaking changes required? S
 The goal here is to research and understand the impact of these changes on users in the community and development teams across Elastic. 2-5 sentences each.
 -->
 
+Currently, we are mapping most of these fields to `labels.*` or `resource.*`. For backwards compatibility in the short term, we should keep current mappings and simply copy relevant fields to the new proposed fields in this RFC. Once all rules have been reviewed, normalization using `labels.*` or `resource.*` as it relates to these proposed fields can be deprecated.
+
 ## Concerns
 
 <!--
