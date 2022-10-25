@@ -1,0 +1,25 @@
+- name: api
+  fields:
+    - name: name
+      type: keyword
+      level: extended
+      short: Name of the API.
+      description: >
+        The name or description of the API.
+      example: User Activity API
+
+    - name: path
+      type: keyword
+      level: extended
+      short: URI of the API endpoint.
+      description: >
+        The URI of the API endpoint, which can include parameters.
+      example: /users/active?pageSize=100
+
+    - name: version
+      type: version
+      level: extended
+      short: Version of the API.
+      description: >
+        Semantic version of the API.
+      example: 2.01

@@ -1,0 +1,24 @@
+- name: policy
+  fields:
+    - name: name
+      type: keyword
+      level: extended
+      short: Name of the policy.
+      description: >
+        The name or title of the policy.
+      example: Allowed user apps
+
+    - name: id
+      type: keyword
+      level: extended
+      short: ID of the policy.
+      description: >
+        Most platforms will assign a unique ID to a policy.
+      example: 7B3166F2
+
+    - name: type
+      type: keyword
+      level: extended
+      short: Type of policy.
+      description: >
+        The field value must be one of the following: functional, posture, security.

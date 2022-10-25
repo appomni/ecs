@@ -25,16 +25,10 @@ Stage X: Provide a brief explanation of why the proposal is being marked as aban
 
 ## Fields
 
-### api
-- `api.name` - Name of the API.
-  - type: keyword
-  - example: `All users`
-- `api.path` - URI of the API endpoint.
-  - type: keyword
-  - example: `/users/active`
-- `api.version` - Version of the API.
-  - type: float
-  - example: `2.01`
+- [api](text/0000/api.yaml)
+- [application](text/0000/application.yaml)
+- [policy](text/0000/policy.yaml)
+- [role](text/0000/role.yaml)
 
 ### application
 - `application.name` - Name of the application.
