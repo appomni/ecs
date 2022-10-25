@@ -8,6 +8,14 @@
         The name or description of the API.
       example: User Activity API
 
+    - name: domain
+      type: keyword
+      level: extended
+      short: Domain of the API.
+      description: >
+        The domain name of the API.
+      example: appomni.com
+
     - name: path
       type: keyword
       level: extended
@@ -23,3 +31,13 @@
       description: >
         Semantic version of the API.
       example: 2.01
+
+    - name: scopes
+      type: keyword
+      level: extended
+      short: Scopes of the API.
+      description: >
+        The scopes required by the API.
+      example: ["create users", "edit users"]
+      normalize:
+        - array

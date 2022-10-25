@@ -23,3 +23,5 @@
       description: >
         The scopes or privileges that users assigned to this role inherit.
       example: ["create users", "edit users"]
+      normalize:
+        - array
