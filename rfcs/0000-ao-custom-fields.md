@@ -19,6 +19,12 @@ This RFC provides guidance for new fields to better describe entities common in 
 Stage 1: If the changes include field additions or modifications, please create a folder titled as the RFC number under rfcs/text/. This will be where proposed schema changes as standalone YAML files or extended example mappings and larger source documents will go as the RFC is iterated upon.
 -->
 
+<!--
+Stage X: Provide a brief explanation of why the proposal is being marked as abandoned. This is useful context for anyone revisiting this proposal or considering similar changes later on.
+-->
+
+## Fields
+
 ### api
 - `api.name` - Name of the API.
   - type: keyword
@@ -82,16 +88,8 @@ Stage 1: If the changes include field additions or modifications, please create 
   - example: `["comment", "edit"]`
 
 <!--
-Stage X: Provide a brief explanation of why the proposal is being marked as abandoned. This is useful context for anyone revisiting this proposal or considering similar changes later on.
--->
-
-## Fields
-
-<!--
 Stage 1: Describe at a high level how this change affects fields. Include new or updated yml field definitions for all of the essential fields in this draft. While not exhaustive, the fields documented here should be comprehensive enough to deeply evaluate the technical considerations of this change. The goal here is to validate the technical details for all essential fields and to provide a basis for adding experimental field definitions to the schema. Use GitHub code blocks with yml syntax formatting, and add them to the corresponding RFC folder.
 -->
-
-
 
 <!--
 Stage 2: Add or update all remaining field definitions. The list should now be exhaustive. The goal here is to validate the technical details of all remaining fields and to provide a basis for releasing these field definitions as beta in the schema. Use GitHub code blocks with yml syntax formatting, and add them to the corresponding RFC folder.
@@ -102,6 +100,8 @@ Stage 2: Add or update all remaining field definitions. The list should now be e
 <!--
 Stage 1: Describe at a high-level how these field changes will be used in practice. Real world examples are encouraged. The goal here is to understand how people would leverage these fields to gain insights or solve problems. ~1-3 paragraphs.
 -->
+
+For entities or concepts that are common in cloud platform events, we need additional fields to fully capture the relevant information. The goal of these proposed top-level objects is to create more precise fields when normalizing cloud-related events.
 
 ## Source data
 
@@ -145,20 +145,10 @@ Stage 3: Document resolutions for all existing concerns. Any new concerns should
 
 The following are the people that consulted on the contents of this RFC.
 
-* TBD | author
-
-<!--
-Who will be or has been consulted on the contents of this RFC? Identify authorship and sponsorship, and optionally identify the nature of involvement of others. Link to GitHub aliases where possible. This list will likely change or grow stage after stage.
-
-e.g.:
-
-* @Yasmina | author
-* @Monique | sponsor
-* @EunJung | subject matter expert
-* @JaneDoe | grammar, spelling, prose
-* @Mariana
--->
-
+* @justinkb88 | author
+* @drewgatchell | subject matter expert
+* @dtocco | subject matter expert
+* @lgraslie | subject matter expert
 
 ## References
 
@@ -168,7 +158,7 @@ e.g.:
 
 <!-- An RFC should link to the PRs for each of it stage advancements. -->
 
-* Stage 0: https://github.com/elastic/ecs/pull/NNN
+* Stage 0: https://github.com/appomni/ecs/pull/1
 
 <!--
 * Stage 1: https://github.com/elastic/ecs/pull/NNN
