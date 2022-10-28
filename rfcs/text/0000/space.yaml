@@ -1,0 +1,24 @@
+- name: space
+  fields:
+    - name: name
+      type: keyword
+      level: extended
+      short: Name of the space.
+      description: >
+        The name or title of the space.
+      example: Weekly Team Meeting
+
+    - name: id
+      type: keyword
+      level: extended
+      short: ID of the space.
+      description: >
+        Most platforms will assign a unique ID to a space.
+      example: 7B3166F2
+
+    - name: category
+      type: keyword
+      level: extended
+      short: Category of space.
+      description: >
+        The field value must be one of the following: channel, meeting, workspace.

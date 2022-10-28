@@ -25,18 +25,47 @@ Stage X: Provide a brief explanation of why the proposal is being marked as aban
 
 ## Fields
 
-- [api](text/0000/api.yaml)
-- [application](text/0000/application.yaml)
-- [policy](text/0000/policy.yaml)
-- [role](text/0000/role.yaml)
-
 <!--
 Stage 1: Describe at a high level how this change affects fields. Include new or updated yml field definitions for all of the essential fields in this draft. While not exhaustive, the fields documented here should be comprehensive enough to deeply evaluate the technical considerations of this change. The goal here is to validate the technical details for all essential fields and to provide a basis for adding experimental field definitions to the schema. Use GitHub code blocks with yml syntax formatting, and add them to the corresponding RFC folder.
 -->
 
+This RFC calls for the introduction of several top-level fields with the following child fields:
+
+| field | type | description |
+| --- | --- | --- |
+| `api.name` | keyword | Name of the API |
+| `api.domain` | keyword | Domain of the API |
+| `api.path` | keyword | URI of the API endpoint |
+| `api.version` | keyword | Version of the API |
+| `api.scopes` | array | Scopes of the API |
+| `application.name` | keyword | Name of the application |
+| `application.id` | keyword | Platform assigned ID of the application |
+| `application.version` | version | Version of the application |
+| `authentication.category` | version | Category of authentication (e.g. `password`, `hardware_token`, `software_token`, etc.) |
+| `policy.name` | keyword | The name or title of the policy |
+| `policy.id` | keyword | ID of the policy |
+| `policy.type` | keyword | Type of policy (e.g. `functional`, `posture`, `security`, etc.) |
+| `role.name` | keyword | Name of the role |
+| `role.id` | keyword | ID of the role |
+| `role.scopes` | array | Scopes of the role |
+| `role.target.user.*` | object | Target user of the role |
+| `role.target.group.*` | object | Target group of the role |
+| `space.name` | keyword | Name of the space |
+| `space.id` | keyword | ID of the space |
+| `space.category` | keyword | Category of the space (e.g. `channel`, `meeting`, `workspace`, etc.) |
+
 <!--
 Stage 2: Add or update all remaining field definitions. The list should now be exhaustive. The goal here is to validate the technical details of all remaining fields and to provide a basis for releasing these field definitions as beta in the schema. Use GitHub code blocks with yml syntax formatting, and add them to the corresponding RFC folder.
 -->
+
+Additional field documentation can be found for each top-level field in its corresponding RFC folder.
+
+- [api](text/0000/api.yaml)
+- [application](text/0000/application.yaml)
+- [authentication](text/0000/authentication.yaml)
+- [policy](text/0000/policy.yaml)
+- [role](text/0000/role.yaml)
+- [space](text/0000/space.yaml)
 
 ## Usage
 

@@ -33,7 +33,7 @@
       example: 2.01
 
     - name: scopes
-      type: keyword
+      type: array
       level: extended
       short: Scopes of the API.
       description: >

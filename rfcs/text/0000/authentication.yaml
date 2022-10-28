@@ -1,0 +1,8 @@
+- name: authentication
+  fields:
+    - name: category
+      type: keyword
+      level: extended
+      short: Category of authentication.
+      description: >
+        The field value must be one of the following: password, hardware_token, software_token, biometric, key, gesture.
