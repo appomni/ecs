@@ -33,18 +33,21 @@ This RFC calls for the introduction of several top-level fields with the followi
 
 | field | type | description |
 | --- | --- | --- |
-| `api.name` | keyword | Name of the API |
-| `api.domain` | keyword | Domain of the API |
-| `api.path` | keyword | URI of the API endpoint |
-| `api.version` | keyword | Version of the API |
-| `api.scopes` | array | Scopes of the API |
 | `application.name` | keyword | Name of the application |
 | `application.id` | keyword | Platform assigned ID of the application |
+| `application.category` | keyword | Category of the application (e.g. `api`) |
+| `application.type` | keyword | Sub-category of the application (e.g. `soap_partner`) |
 | `application.version` | version | Version of the application |
+| `application.domain` | keyword | Domain of the application |
+| `application.path` | keyword | URI of the application |
+| `application.scopes` | array | Scopes of the application |
 | `authentication.category` | version | Category of authentication (e.g. `password`, `hardware_token`, `software_token`, etc.) |
+| `authentication.provider` | version | Authentication IdP (e.g. `Okta`) |
+| `authentication.goal` | keyword | Target activity performed (e.g. step up auth to perform an admin function) |
 | `policy.name` | keyword | The name or title of the policy |
 | `policy.id` | keyword | ID of the policy |
-| `policy.type` | keyword | Type of policy (e.g. `functional`, `posture`, `security`, etc.) |
+| `policy.category` | keyword | Category of policy (e.g. `functional`, `posture`, `security`, etc.) |
+| `policy.type` | keyword | Type of policy |
 | `role.name` | keyword | Name of the role |
 | `role.id` | keyword | ID of the role |
 | `role.scopes` | array | Scopes of the role |
@@ -53,6 +56,10 @@ This RFC calls for the introduction of several top-level fields with the followi
 | `space.name` | keyword | Name of the space |
 | `space.id` | keyword | ID of the space |
 | `space.category` | keyword | Category of the space (e.g. `channel`, `meeting`, `workspace`, etc.) |
+| `setting.name` | keyword | The name of the setting |
+| `setting.id` | keyword | ID of the setting |
+| `setting.category` | keyword | Category of setting (e.g. `user`, `security`, etc.) |
+| `setting.type` | keyword | Type of setting |
 
 <!--
 Stage 2: Add or update all remaining field definitions. The list should now be exhaustive. The goal here is to validate the technical details of all remaining fields and to provide a basis for releasing these field definitions as beta in the schema. Use GitHub code blocks with yml syntax formatting, and add them to the corresponding RFC folder.
