@@ -41,25 +41,23 @@ This RFC calls for the introduction of several top-level fields with the followi
 | `application.domain` | keyword | Domain of the application |
 | `application.path` | keyword | URI of the application |
 | `application.scopes` | array | Scopes of the application |
-| `authentication.category` | version | Category of authentication (e.g. `password`, `hardware_token`, `software_token`, etc.) |
-| `authentication.provider` | version | Authentication IdP (e.g. `Okta`) |
-| `authentication.goal` | keyword | Target activity performed (e.g. step up auth to perform an admin function) |
+| `authentication.category` | keyword | Category of authentication (e.g. `password`, `hardware_token`, `software_token`, etc.) |
+| `authentication.method` | keyword | Method of authentication |
+| `authentication.provider` | keyword | Authentication IdP (e.g. `Okta`) |
 | `policy.name` | keyword | The name or title of the policy |
 | `policy.id` | keyword | ID of the policy |
-| `policy.category` | keyword | Category of policy (e.g. `functional`, `posture`, `security`, etc.) |
+| `policy.category` | keyword | Category of policy (e.g. `functional`, `posture`, `security`, `access`) |
 | `policy.type` | keyword | Type of policy |
 | `role.name` | keyword | Name of the role |
 | `role.id` | keyword | ID of the role |
 | `role.scopes` | array | Scopes of the role |
-| `role.target.user.*` | object | Target user of the role |
-| `role.target.group.*` | object | Target group of the role |
 | `space.name` | keyword | Name of the space |
 | `space.id` | keyword | ID of the space |
-| `space.category` | keyword | Category of the space (e.g. `channel`, `meeting`, `workspace`, etc.) |
+| `space.category` | keyword | Category of the space (e.g. `channel`, `meeting`, etc.) |
 | `setting.name` | keyword | The name of the setting |
 | `setting.id` | keyword | ID of the setting |
-| `setting.category` | keyword | Category of setting (e.g. `user`, `security`, etc.) |
-| `setting.type` | keyword | Type of setting |
+| `setting.category` | keyword | Category of setting (e.g. `user`, `organization`, etc.) |
+| `setting.type` | keyword | Type of setting (e.g. `security`) |
 
 <!--
 Stage 2: Add or update all remaining field definitions. The list should now be exhaustive. The goal here is to validate the technical details of all remaining fields and to provide a basis for releasing these field definitions as beta in the schema. Use GitHub code blocks with yml syntax formatting, and add them to the corresponding RFC folder.
