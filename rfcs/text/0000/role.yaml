@@ -1,0 +1,27 @@
+- name: role
+  fields:
+    - name: name
+      type: keyword
+      level: extended
+      short: Name of the role.
+      description: >
+        The name or title of the role.
+      example: Sales Engineers
+
+    - name: id
+      type: keyword
+      level: extended
+      short: ID of the role.
+      description: >
+        Most platforms will assign a unique ID to a role.
+      example: 7B3166F2
+
+    - name: scopes
+      type: keyword
+      level: extended
+      short: Scopes of the role.
+      description: >
+        The scopes or privileges that users assigned to this role inherit.
+      example: ["create users", "edit users"]
+      normalize:
+        - array

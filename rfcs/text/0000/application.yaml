@@ -1,0 +1,25 @@
+- name: application
+  fields:
+    - name: name
+      type: keyword
+      level: extended
+      short: Name of the application.
+      description: >
+        The name or title of the application.
+      example: My Custom App
+
+    - name: id
+      type: keyword
+      level: extended
+      short: Platform assigned ID of the application.
+      description: >
+        Most platforms will assign a unique ID to a connected or integrated app.
+      example: 103754
+
+    - name: version
+      type: version
+      level: extended
+      short: Version of the application.
+      description: >
+        Semantic version of the application.
+      example: 2.01
